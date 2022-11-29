@@ -1,0 +1,31 @@
+public class DNA {
+  // programme to determine whether there is a protein in a strand of DNA
+
+  public static void main(String[] args) {
+
+    String dna1 = "ATGCGATACGCTTGA";
+    String dna2 = "ATGCGATACGTGA";
+    String dna3 = "ATTAATATGTACTGA";
+
+    String dna = dna3;
+    int start = dna.indexOf("ATG");
+    int end = dna.indexOf("TGA");
+
+    System.out.println(dna.length());
+
+    System.out.println(start);
+
+    System.out.println(end);
+
+    if (start == -1 && end == -1 ){
+      System.out.println("Not a protein!");
+    } else if ((start - end) % 3 ==0){
+      System.out.println("Is a protein!");
+      String protein = dna.substring(start,(end+3));
+      System.out.println(protein);
+   } else {
+     System.out.println("Not a Protein!");
+   }
+  
+  }
+}
